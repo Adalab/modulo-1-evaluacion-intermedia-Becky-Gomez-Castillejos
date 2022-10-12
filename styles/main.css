@@ -1,81 +1,108 @@
-.body {
-    width: 100vw;
-    height: 100vh;
+:root {
+    --menu-text: #4a4a4a;
+    --background-color: #3CDBC0;
+    --text-color: #FFFFFF;
 }
 
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+}
 
-.header {
+header {
+    top: 0;
     position: fixed;
-    background-color: white;
+    background-color: var(--text-color);
     width: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
+    line-height: 1px;
     
 }
-.imagen {
+
+.link-image {
     width: 155px;
-    transform: translateX(170px);
+    padding-top: 25px;
+    transform: translateX(82px);
+    
 
 }
+
 .menu {
     padding: 10px;
     margin-left: 50px;
     margin-right: 70px;
     transform: translateX(-10px);
 
-
 }
-.lista {
+
+.list {
+    color: var(--menu-text);
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     font-family: 'Rubik', sans-serif;
     list-style-type: none;
+    text-transform: uppercase;
+    padding: 10px 10px 13px 10px;
+    gap: 20px;
+    
 }
 
-.Enlace1 {
+.link1, .link2 {
     text-decoration: none;
-    font-size: 16px;
-    color: #4a4a4a;
-   
-}
-.Enlace2 {
-    text-decoration: none;
-    color: #4a4a4a;
-    font-size: 16px;
+    color: var(--menu-text);
     
 }
-.main {
+    
+main {
     width: 100vw;
+    height: 100vh;
+    background-color: var(--background-color);
     
    
 }
-.bloque-texto {
-    padding-bottom: -40%;
+.text-block {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
  
-    background-color: #3CDBC0;
+    
 }
-.Frase {
+.phrase {
     font-size: 30px;
     font-family: 'Rubik', sans-serif;
-    color: white; 
+    color: var(--text-color); 
     word-spacing: 100vw;
     text-align: center;
 }
 
-@media screen and (min-width: 768px)
-    .menu {
-        display: flex;
-        justify-content: left;
+@media screen and (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
     }
+    .link-image {
+        padding: 20px 30px 20px;
+        transform: translateY(35px);
+    }
+    .list {
+        gap: 20px;
+        padding: 70px 30px 13px;
+        transform: translateX(70px);
+    }
+    .phrase {
+        font-size: 40px;
+    }
+}
+    
     
 
 
